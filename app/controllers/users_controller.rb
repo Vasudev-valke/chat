@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:show, :edit, :update, :index, :destroy]
 
   # GET /users
   # GET /users.json
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @articles = @user.articles
   end
 
   # GET /users/new

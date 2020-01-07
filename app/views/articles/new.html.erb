@@ -1,5 +1,4 @@
 <%# if @articles.errors.any? %>
-<h1>The following errors prevented from article getting created</h1>
 <ul>
 	<% @article.errors.full_messages.each do |msg| %>
 	<li><%= msg %></li>
@@ -10,4 +9,4 @@
 
 <%= render 'form', article: @article %>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Back', current_user %>
