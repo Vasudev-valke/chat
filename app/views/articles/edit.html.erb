@@ -1,0 +1,14 @@
+<h1>Editing Article</h1>
+<% if @article.errors.any? %>
+<h2>Following errors prevented from article getting created</h2>
+<ul>
+	<% @article.errors.full_messages.each do |msg| %>
+	<li> <%= msg %> </li>
+	<% end %>
+</ul>
+<% end %>
+<%= render 'form', article: @article %>
+
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %>
+<%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %>
