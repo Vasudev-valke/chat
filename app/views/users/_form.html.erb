@@ -1,3 +1,7 @@
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <div class="ui form">
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -26,7 +30,17 @@
     <%= form.password_field :password %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit "Sign up", class: "ui blue submit button" %>
+  
 <% end %>
+</div></div>
+<div class="middle aligned column">
+      
+        <%= link_to 'Login', new_session_path, class: "ui blue submit button" %>
+      </div>
+    </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>
+  </div>

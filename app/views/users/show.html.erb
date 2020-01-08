@@ -1,3 +1,6 @@
+<div class="ui segment">
+  <div class="ui two column very relaxed grid">
+    <div class="column">
 <p id="notice"><%= notice %></p>
 <h1>User</h1>
 <p>
@@ -10,9 +13,13 @@
   <%= @user.email %>
 </p>
 <%= link_to 'New article', new_article_path %> |
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> |
-<%= link_to 'Logout', sessions_path, method: :delete %>
+<%= link_to 'Back', users_path %>
 
 <br>
 <%= render 'articles/articles' %>
+</div>
+<div class="column">
+	<h2>Chat</h2>
+	</div>
+</div>
+<div class="ui vertical divider">|</div></div>
